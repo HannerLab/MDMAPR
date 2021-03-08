@@ -15,6 +15,8 @@ The MDMAPR 2.0 shiny application has the option to be connected to a custom deve
 
 To learn how to set up a MDMAPR 2.0 MySQL database to run with the MDMAPR Shiny application please refer to the [wiki](https://github.com/AlkaBenawra/MDMAPR/wiki).
 
+Click here to view a demo version of the [MDMAPR 2.0](https://hannerlab.shinyapps.io/MDMAPR2/)
+
 The MDMAPR 2.0 was developed by Alka Benawra at the University of Guelph. 
 
 ## Installation
