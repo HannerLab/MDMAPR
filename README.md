@@ -55,7 +55,7 @@ launchApp()
 
 
 ## Example on how to format raw qPCR fluoresence file data from MIC, StepOnePlus or Biomeme two3/Franklin machines into table that includes rows for each well location name and the associated fluorescence data for each reaction cycle. 
-The table is written to the local machine directory as a CSV file. The formatted data can be copied and pasted into the results_Table or standardCurveResults_Table, which are used in the MDMAPR 2.0 MySQL database.
+The table is written to the local machine directory as a CSV file. The formatted data can be copied and pasted into the [results_Table](https://github.com/HannerLab/MDMAPR/blob/master/MySQL/MySQL_Table_Template_Files/results_Table.csv) or [standardCurveResults_Table](https://github.com/HannerLab/MDMAPR/blob/master/MySQL/MySQL_Table_Template_Files/standardCurveResults_Table.csv), which are used in the MDMAPR 2.0 MySQL database.
 ``` r
 library(MDMAPR)
 
