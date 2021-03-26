@@ -54,7 +54,7 @@ launchApp()
 ```
 
 
-## Example on how to format raw qPCR fluoresence file data from MIC, StepOnePlus or Biomeme two3/Franklin machines into table that includes rows for each well location name and the associated fluorescence data for each reaction cycle. 
+## Example on how to format raw qPCR fluoresence file data from MIC, StepOnePlus or Biomeme two3/Franklin machines into a table that includes rows for each well location on qPCR plate and the associated fluorescence data for each reaction cycle. 
 The table is written to the local machine directory as a CSV file. The formatted data can be copied and pasted into the [results_Table](https://github.com/HannerLab/MDMAPR/blob/master/MySQL/MySQL_Table_Template_Files/results_Table.csv) or [standardCurveResults_Table](https://github.com/HannerLab/MDMAPR/blob/master/MySQL/MySQL_Table_Template_Files/standardCurveResults_Table.csv), which are used in the MDMAPR 2.0 MySQL database.
 ``` r
 library(MDMAPR)
@@ -67,8 +67,8 @@ formatRawFluorescenceFile(rawFluorescenceFile = "MIC_raw_fluorescence_data.csv",
 ```
 
 
-## Example on how to add systemCalculatedThresholdValue and systemCalculatedCqValue to results_Table and standardCurveResults_Table files. 
-User can also add userProvidedCqValue to the file by setting calculateUserProvidedCq parameter to "Yes". If user wants system to calculate userProvidedCqValue they must provide userProvidedThresholdValue's in the file.
+## Example on how to add systemCalculatedThresholdValue and systemCalculatedCqValue to the results_Table and standardCurveResults_Table files. 
+The results_Table and standardCurveResults_Table files must have the formatted fluorescence data already input in the file in order for the addThresholdCq function to work. Users can also use the addThresholdCq function to add the userProvidedCqValue's to the file by setting the calculateUserProvidedCq parameter to "Yes". The userProvidedThresholdValue's must be provided in the results_Table and standardCurveResults_Table in order for the addThresholdCq function to calculate the userProvidedCqValue's.
 
 ``` r
 library(MDMAPR)
