@@ -66,7 +66,8 @@ formatRawFluorescenceFile(rawFluorescenceFile = "MIC_raw_fluorescence_data.csv",
 ```
 
 
-## Example on how to add systemCalculatedThresholdValue and systemCalculatedCqValue to results_Table and standardCurveResults_Table files. User can also add userProvidedCqValue to THE file by setting calculateUserProvidedCq parameter to "Yes". If user wants system to calculate userProvidedCqValue they must provide userProvidedThresholdValue's in the file.
+## Example on how to add systemCalculatedThresholdValue and systemCalculatedCqValue to results_Table and standardCurveResults_Table files. 
+#User can also add userProvidedCqValue to THE file by setting calculateUserProvidedCq parameter to "Yes". If user wants system to calculate userProvidedCqValue they must provide userProvidedThresholdValue's in the file.
 
 ``` r
 library(MDMAPR)
