@@ -14,6 +14,21 @@
 #' @export
 #'
 #' @usage formatRawFluorescenceFile(rawFluorescenceFile, platform, outputFileName)
+#'
+#' @examples
+#'\dontrun{
+#' formatRawFluorescenceFile("rawFluorescenceFile.xlsx",
+#'                           "StepOnePlus",
+#'                           "formatted_SOP_fluorescence.csv")
+#'
+#' formatRawFluorescenceFile("rawFluorescenceFile.csv",
+#'                           "MIC",
+#'                           "formatted_MIC_fluorescence.csv")
+#'
+#' formatRawFluorescenceFile("rawFluorescenceFile.csv",
+#'                           "Biomeme two3/Franklin",
+#'                           "formatted_Biomeme_fluorescence.csv")
+#'}
 
 
 formatRawFluorescenceFile <-function(rawFluorescenceFile, platform, outputFileName){
@@ -93,6 +108,15 @@ formatRawFluorescenceFile <-function(rawFluorescenceFile, platform, outputFileNa
 #' @export
 #'
 #' @usage addThresholdCq(file, calculateUserProvidedCq)
+#'
+#' @examples
+#'\dontrun{
+#' addThresholdCq(file = "results_Table.csv", "Yes")
+#' addThresholdCq(file = "results_Table.csv", "No")
+#' addThresholdCq(file = "standardCurveResults_Table.csv", "Yes")
+#' addThresholdCq(file = "standardCurveResults_Table.csv", "No")
+#'}
+
 
 
 

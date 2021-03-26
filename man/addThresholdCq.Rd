@@ -22,3 +22,11 @@ results_Table or standardCurveResults_Table files. User can also add userProvide
 file by setting calculateUserProvidedCq parameter to "Yes". If user wants system to calculate
 userProvidedCqValue they must provide userProvidedThresholdValue's.
 }
+\examples{
+\dontrun{
+addThresholdCq(file = "results_Table.csv", "Yes")
+addThresholdCq(file = "results_Table.csv", "No")
+addThresholdCq(file = "standardCurveResults_Table.csv", "Yes")
+addThresholdCq(file = "standardCurveResults_Table.csv", "No")
+}
+}

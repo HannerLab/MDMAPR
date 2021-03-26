@@ -54,6 +54,36 @@ launchApp()
 ```
 
 
+## Example on how to format raw qPCR fluoresence file data from MIC, StepOnePlus or Biomeme two3/Franklin machines into table that includes rows for each well location name and the associated fluorescence data for each reaction cycle. The table is written to the local machine directory as a CSV file. The formatted data can be copied and pasted into the results_Table or standardCurveResults_Table, which are used in the MDMAPR 2.0 MySQL database.
+``` r
+library(MDMAPR)
+
+#Use formatRawFluorescenceFile function to format raw MIC qPCR fluorescence file.
+formatRawFluorescenceFile(rawFluorescenceFile = "MIC_raw_fluorescence_data.csv",
+                          platform = "MIC", 
+                          rawFluorescenceFile = "MIC_formatted_fluorescence_data.csv")
+
+```
+
+
+## Example on how to add systemCalculatedThresholdValue and systemCalculatedCqValue to results_Table and standardCurveResults_Table files. User can also add userProvidedCqValue to THE file by setting calculateUserProvidedCq parameter to "Yes". If user wants system to calculate userProvidedCqValue they must provide userProvidedThresholdValue's in the file.
+
+``` r
+library(MDMAPR)
+
+#Use addThresholdCq() to add systemCalculatedThresholdValue, systemCalculatedCqValue, and #userProvidedCqValue to results_Table files.
+addThresholdCq(file = "results_Table.csv", 
+               calculateUserProvidedCq = "Yes")
+
+#Use addThresholdCq() to add systemCalculatedThresholdValue and systemCalculatedCqValue to standardCurveResults_Table files. The userProvidedCqValue is not added. 
+addThresholdCq(file "standardCurveResults_Table.csv", 
+               calculateUserProvidedCq = "No")
+
+
+```
+
+
+
 ## Mapping Dashboard
 
 <kbd><img src="images/mapping_dashboard.png" width=600></kbd>
