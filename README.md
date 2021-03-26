@@ -54,7 +54,8 @@ launchApp()
 ```
 
 
-## Example on how to format raw qPCR fluoresence file data from MIC, StepOnePlus or Biomeme two3/Franklin machines into table that includes rows for each well location name and the associated fluorescence data for each reaction cycle. The table is written to the local machine directory as a CSV file. The formatted data can be copied and pasted into the results_Table or standardCurveResults_Table, which are used in the MDMAPR 2.0 MySQL database.
+## Example on how to format raw qPCR fluoresence file data from MIC, StepOnePlus or Biomeme two3/Franklin machines into table that includes rows for each well location name and the associated fluorescence data for each reaction cycle. 
+The table is written to the local machine directory as a CSV file. The formatted data can be copied and pasted into the results_Table or standardCurveResults_Table, which are used in the MDMAPR 2.0 MySQL database.
 ``` r
 library(MDMAPR)
 
@@ -67,7 +68,7 @@ formatRawFluorescenceFile(rawFluorescenceFile = "MIC_raw_fluorescence_data.csv",
 
 
 ## Example on how to add systemCalculatedThresholdValue and systemCalculatedCqValue to results_Table and standardCurveResults_Table files. 
-#User can also add userProvidedCqValue to THE file by setting calculateUserProvidedCq parameter to "Yes". If user wants system to calculate userProvidedCqValue they must provide userProvidedThresholdValue's in the file.
+User can also add userProvidedCqValue to THE file by setting calculateUserProvidedCq parameter to "Yes". If user wants system to calculate userProvidedCqValue they must provide userProvidedThresholdValue's in the file.
 
 ``` r
 library(MDMAPR)
